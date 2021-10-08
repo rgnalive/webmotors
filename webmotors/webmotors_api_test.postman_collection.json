@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "a09c6d16-4837-44ae-8c4d-9195886be299",
+		"name": "webmotors_api_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Make",
+			"item": [
+				{
+					"name": "Consultar Makes",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Make",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Make"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Model",
+			"item": [
+				{
+					"name": "Consultar Model por MakeID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Model?MakeID=2",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Model"
+							],
+							"query": [
+								{
+									"key": "MakeID",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorno de erro ao tentar consultar Models sem passar o parâmetro MakeID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Model",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Model"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Version",
+			"item": [
+				{
+					"name": "Consultar Version por ModelID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Version?ModelID=4",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Version"
+							],
+							"query": [
+								{
+									"key": "ModelID",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorno de erro ao tentar consultar Versions sem passar o parâmetro ModelID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Version",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Version"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "Consultar Vehicles passando o Page igual a 1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Vehicles?Page=1",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Vehicles"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Vehicles passando o Page igual a 2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Vehicles?Page=2",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Vehicles"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retorno de erro ao tentar consultar Vehicles sem passar o parâmetro Page",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://desafioonline.webmotors.com.br/api/OnlineChallenge/Vehicles?Page=1",
+							"protocol": "https",
+							"host": [
+								"desafioonline",
+								"webmotors",
+								"com",
+								"br"
+							],
+							"path": [
+								"api",
+								"OnlineChallenge",
+								"Vehicles"
+							],
+							"query": [
+								{
+									"key": "Page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
